@@ -133,7 +133,7 @@
         
         <div class="assignment-card">
             <h2> Assignment 2: Redirect Servlet</h2>
-            <p>A Search redirecting Form Button.</p>
+            <p>The button for Search redirect Form.</p>
             <a href="redirect.html" class="btn btn-google">Open Search Form</a>
         </div>
         
