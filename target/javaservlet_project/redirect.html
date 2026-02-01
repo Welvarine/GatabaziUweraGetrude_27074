@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Assignment 2</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f5f5f5; 
+        }
+
+        .search-container {
+            background: white;
+            padding: 60px 50px;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            width: 450px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px; 
+            margin-bottom: 40px;
+        }
+        h2 span:nth-child(1) { color: #4285F4; } 
+        h2 span:nth-child(2) { color: #EA4335; }
+        h2 span:nth-child(3) { color: #FBBC05; }
+        h2 span:nth-child(4) { color: #4285F4; } 
+        h2 span:nth-child(5) { color: #34A853; } 
+        h2 span:nth-child(6) { color: #EA4335; } 
+
+        .form-group {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 16px; /* bigger input */
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 18px; 
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #4285F4;
+            box-shadow: 0 0 10px rgba(66, 133, 244, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 16px; 
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #4285F4, #34A853, #FBBC05, #EA4335);
+            background-size: 400% 400%;
+            animation: gradientBG 5s ease infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(66, 133, 244, 0.7), 
+                        0 0 15px rgba(52, 168, 83, 0.7),
+                        0 0 15px rgba(251, 188, 5, 0.7),
+                        0 0 15px rgba(234, 67, 53, 0.7);
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .info {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 15px; 
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h2>
+            <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span> Search
+        </h2>
+        <form action="RedirectServlet" method="get">
+            <div class="form-group">
+                <label for="searchQuery">Enter your search:</label>
+                <input type="text" id="searchQuery" name="query" placeholder="What do you want to search?" required>
+            </div>
+            <button type="submit">Search here</button>
+            <p class="info">You will be redirected to Google</p>
+        </form>
+    </div>
+</body>
+</html>
